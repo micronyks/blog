@@ -7,7 +7,7 @@ import {Router,NavigationExtras } from '@angular/router';
    This is About Component 
    {{about}} </h6>
    <div *ngIf="show">Nikhil Shah</div>
-   <button (click)="click()">Click</button>
+   <button (click)="click()">Click</button>  
   
    `
 })

@@ -28,7 +28,7 @@ var AboutComponent = (function () {
     };
     AboutComponent = __decorate([
         core_1.Component({
-            template: "<h6>Welcome :{{user}}\n   This is About Component \n   {{about}} </h6>\n   <div *ngIf=\"show\">Nikhil Shah</div>\n   <button (click)=\"click()\">Click</button>\n  \n   "
+            template: "<h6>Welcome :{{user}}\n   This is About Component \n   {{about}} </h6>\n   <div *ngIf=\"show\">Nikhil Shah</div>\n   <button (click)=\"click()\">Click</button>  \n  \n   "
         }), 
         __metadata('design:paramtypes', [shared_service_1.UserService, router_1.Router])
     ], AboutComponent);

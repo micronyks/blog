@@ -11,7 +11,5 @@ export class HomeComponent {
   constructor(private s:UserService,private router:Router,private route:ActivatedRoute){
     s.getJson();
   }
-
-
  
 }

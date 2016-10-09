@@ -20,7 +20,7 @@ import {
    
     <a (click)="click()">Angualr2</a>
     <a href="javascript:void(0)" class="pointer" (click)="gotoDotNet()">DotNet</a>
-    <a class="pointer" [routerLink]="['../../about']">back</a>
+    <a class="pointer" [routerLink]="['../about']">back</a>
     <a class="pointer" routerLink="dotnet" fragment="anchor">DotNet</a>
     <router-outlet></router-outlet>
     
@@ -46,6 +46,6 @@ export class TechComponent{
       fragment: 'anchor'
     };
 
-    this.router.navigate(['/tech/tech/dotnet'], navigationExtras);
+    this.router.navigate(['/tech/dotnet'], navigationExtras);
   }
 }

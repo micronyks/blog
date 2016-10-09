@@ -28,11 +28,11 @@ var TechComponent = (function () {
             queryParams: { 'session_id': 5 },
             fragment: 'anchor'
         };
-        this.router.navigate(['/tech/tech/dotnet'], navigationExtras);
+        this.router.navigate(['/tech/dotnet'], navigationExtras);
     };
     TechComponent = __decorate([
         core_1.Component({
-            template: "<h6>Welcome: {{user}}\n   <br>\n   This is Technology Component \n   \n    <a (click)=\"click()\">Angualr2</a>\n    <a href=\"javascript:void(0)\" class=\"pointer\" (click)=\"gotoDotNet()\">DotNet</a>\n    <a class=\"pointer\" [routerLink]=\"['../../about']\">back</a>\n    <a class=\"pointer\" routerLink=\"dotnet\" fragment=\"anchor\">DotNet</a>\n    <router-outlet></router-outlet>\n    \n    "
+            template: "<h6>Welcome: {{user}}\n   <br>\n   This is Technology Component \n   \n    <a (click)=\"click()\">Angualr2</a>\n    <a href=\"javascript:void(0)\" class=\"pointer\" (click)=\"gotoDotNet()\">DotNet</a>\n    <a class=\"pointer\" [routerLink]=\"['../about']\">back</a>\n    <a class=\"pointer\" routerLink=\"dotnet\" fragment=\"anchor\">DotNet</a>\n    <router-outlet></router-outlet>\n    \n    "
         }), 
         __metadata('design:paramtypes', [shared_service_1.UserService, router_1.ActivatedRoute, router_2.Router])
     ], TechComponent);

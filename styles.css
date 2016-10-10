@@ -14,11 +14,10 @@ md-sidenav {
 }
 
 .sidenav-title {
-  color: white;
-  background-color: darkblue;
-  line-height: 64px;
+  color: black;
   text-indent: 20px;
-  margin-top: -20px;
+  background: deeppink;
+  padding: 3px;
 }
 
 .sidenav-menu {

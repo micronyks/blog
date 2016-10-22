@@ -1,0 +1,33 @@
+
+  <md-sidenav-layout>
+
+  <md-sidenav #sidenav mode="side" class="app-sidenav" opened="false">
+    <div class="sidenav-title">
+      <h2>MENU</h2>
+    </div>
+    
+    <ul class="list-group">
+      <li class="list-group-item"><a routerLink="home" routerLinkActive="active"> Home </a></li>
+      <li class="list-group-item"><a routerLink="tech" routerLinkActive="active">Technology</a></li>
+      <li class="list-group-item"><a routerLink="heroes" routerLinkActive="active">Heroes</a></li>
+      <li class="list-group-item"><a routerLink="about" routerLinkActive="active">About</a></li>
+      <li class="list-group-item"><a routerLink="about1" routerLinkActive="active">About1</a></li>
+    </ul>
+    
+  </md-sidenav>
+
+
+  <md-toolbar color="accent" class="toolbar">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+  </button>
+ 
+  </md-toolbar>
+
+  <div class="app-content container" >
+              <div class="app-content" >
+                      <router-outlet ></router-outlet>
+              </div>
+  </div>
+  
+</md-sidenav-layout>

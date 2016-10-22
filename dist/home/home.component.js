@@ -16,6 +16,7 @@ var HomeComponent = (function () {
         this.s = s;
         this.router = router;
         this.route = route;
+        this.myVar = "son";
         s.getJson();
     }
     HomeComponent = __decorate([

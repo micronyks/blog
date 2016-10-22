@@ -26,7 +26,7 @@ import {MdSidenavModule} from '@angular2-material/sidenav';
 ////import {MdListModule} from '@angular2-material/list/list';
 //import {MdGridListModule} from '@angular2-material/grid-list/grid-list';
 import {MdCardModule} from '@angular2-material/card';
- 
+ import {ModalOpenDirective} from './myDirective';
 const MATERIAL_MODULES = [
   MdButtonModule,
   MdIconModule,
@@ -51,9 +51,11 @@ const MATERIAL_MODULES = [
     MdInputModule.forRoot(),
     //MdSliderModule.forRoot(),
     //MdSlideToggleModule.forRoot(),
-    OverlayModule.forRoot()
+    OverlayModule.forRoot(),
+    
   ],
-  exports: MATERIAL_MODULES
+  declarations:[ModalOpenDirective],
+  exports: [MATERIAL_MODULES,ModalOpenDirective]
 })
 export class MaterialRootModule {}
 

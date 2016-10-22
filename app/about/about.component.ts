@@ -3,12 +3,18 @@ import {Component} from '@angular/core';
 import {UserService} from '../shared/shared.service';
 import {Router,NavigationExtras } from '@angular/router';
 @Component({
-   template:`<h6>Welcome :{{user}}
-   This is About Component 
-   {{about}} </h6>
-   <div *ngIf="show">Nikhil Shah</div>
-   <button (click)="click()">Click</button>  
-  
+   template:`
+
+  <md-card>
+   <md-card-subtitle>Contact Us</md-card-subtitle>
+   <md-card-title>Nikhil Shah</md-card-title>   
+   <md-card-content>
+        <p>gmail : nikhilshahlive@gmail.com</p>
+        <p>Skype : nikhilshahlive</p>
+        <p>(M)   : 09033004579</p>
+   </md-card-content>
+  </md-card>
+   
    `
 })
 

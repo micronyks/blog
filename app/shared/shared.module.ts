@@ -3,10 +3,10 @@ import { NgModule,
 import { CommonModule }        from '@angular/common';
 import { UserService }         from './shared.service';
 import {MaterialModule} from '../materialdesign/material.module';
-
+import {ModalOpenDirective} from '../materialdesign/myDirective';
 
 @NgModule({
-  imports:      [ CommonModule,MaterialModule.forRoot() ],
+  imports:      [ CommonModule,MaterialModule ],
   declarations: [],
   exports:      [ CommonModule,MaterialModule],
   //providers:[UserService]

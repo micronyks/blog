@@ -8,6 +8,7 @@ import {Router,ActivatedRoute} from '@angular/router';
   `
 })
 export class HomeComponent { 
+  myVar="son";
   constructor(private s:UserService,private router:Router,private route:ActivatedRoute){
     s.getJson();
   }

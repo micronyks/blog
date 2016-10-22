@@ -17,8 +17,8 @@ import {
    template:`<h6>Welcome: {{user}}
    <br>
    This is Technology Component 
-   
-    <a (click)="click()">Angualr2</a>
+    <h4 modalOpen style="cursor:pointer"> OPEN</h4>
+    <a (click)="click()" >Angualr2</a>
     <a href="javascript:void(0)" class="pointer" (click)="gotoDotNet()">DotNet</a>
     <a class="pointer" [routerLink]="['../about']">back</a>
     <a class="pointer" routerLink="dotnet" fragment="anchor">DotNet</a>

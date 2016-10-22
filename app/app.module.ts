@@ -5,15 +5,13 @@ import {SharedModule} from './shared/shared.module';
 import {routing} from './app.routing';
 import {HomeComponent} from './home/home.component';
 import {ItemListComponent} from './home/item.component';
-
+import { About1Component }        from './about/about1.component';
 
 @NgModule({
   imports:      [ BrowserModule,SharedModule.forRoot(),routing],
   declarations: [ AppComponent,HomeComponent ],
   bootstrap:    [ AppComponent ],
-  providers:[
-    
-  ]
+  providers:    []
 })
 export class AppModule { }
 

@@ -23,7 +23,7 @@ var SharedModule = (function () {
     };
     SharedModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule, material_module_1.MaterialModule.forRoot()],
+            imports: [common_1.CommonModule, material_module_1.MaterialModule],
             declarations: [],
             exports: [common_1.CommonModule, material_module_1.MaterialModule],
         }), 

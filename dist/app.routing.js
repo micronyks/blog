@@ -8,7 +8,8 @@ var routes = [
         component: home_component_1.HomeComponent
     },
     { path: 'about', loadChildren: 'app/about/about.module' },
-    { path: 'tech', loadChildren: 'app/tech/tech.module' }
+    { path: 'tech', loadChildren: 'app/tech/tech.module' },
+    { path: 'heroes', loadChildren: 'app/heroes/heroes.module' }
 ];
 exports.routing = router_1.RouterModule.forRoot(routes, { useHash: true });
 //# sourceMappingURL=app.routing.js.map

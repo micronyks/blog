@@ -10,18 +10,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var core_2 = require('@angular/core');
+var common_1 = require("@angular/common");
 require('rxjs/Rx');
+var router_1 = require('@angular/router');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(location, router) {
+        var _this = this;
+        this.location = location;
+        this.router = router;
+        this.events = [];
+        this.location.subscribe(function (ev) { return _this.events.push(ev); });
+        router.events.subscribe(function (event) {
+            //if (event instanceof NavigationStart) {
+            console.log('event', event.url);
+            //}
+        });
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
+            // moduleId:module.id,
             encapsulation: core_2.ViewEncapsulation.None,
             styleUrls: [],
-            template: " \n\n  <md-sidenav-layout>\n\n  <md-sidenav #sidenav mode=\"side\" class=\"app-sidenav\" opened=\"false\">\n    <div class=\"sidenav-title\">\n      <h2>NyksBlog</h2>\n    </div>\n    <div class=\"sidenav-menu\">\n      <a routerLink=\"home\" routerLinkActive=\"active\"> Home </a>\n    </div>\n    <div class=\"sidenav-menu\">\n     <a routerLink=\"about\" routerLinkActive=\"active\">About</a>\n    </div>\n    <div class=\"sidenav-menu\">\n     <a routerLink=\"tech\" routerLinkActive=\"active\">Technology</a>\n    </div>\n    \n  </md-sidenav>\n\n\n  <md-toolbar color=\"accent\" class=\"toolbar\">\n    <button class=\"app-icon-button\" (click)=\"sidenav.toggle()\">\n      <i class=\"material-icons app-toolbar-menu\">menu</i>\n    </button>\n \n    \n\n  </md-toolbar>\n\n  <div class=\"app-content container well\">\n              <div class=\"app-content\" >\n                      <router-outlet></router-outlet>\n              </div>\n</div>\n</md-sidenav-layout>\n\n"
+            templateUrl: 'app/app.component.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [common_1.Location, router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());

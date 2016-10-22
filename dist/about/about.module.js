@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 //import {CommonModule} from '@angular/common';
 var about_component_1 = require('./about.component');
+var about1_component_1 = require('./about1.component');
 var about_routing_1 = require('./about.routing');
 var shared_module_1 = require('../shared/shared.module');
 var AboutModule = (function () {
@@ -19,7 +20,7 @@ var AboutModule = (function () {
     AboutModule = __decorate([
         core_1.NgModule({
             imports: [shared_module_1.SharedModule, about_routing_1.routing],
-            declarations: [about_component_1.AboutComponent],
+            declarations: [about_component_1.AboutComponent, about1_component_1.About1Component],
             //exports:[AboutComponent],
             providers: []
         }), 

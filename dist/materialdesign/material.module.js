@@ -23,6 +23,7 @@ var sidenav_1 = require('@angular2-material/sidenav');
 ////import {MdListModule} from '@angular2-material/list/list';
 //import {MdGridListModule} from '@angular2-material/grid-list/grid-list';
 var card_1 = require('@angular2-material/card');
+var myDirective_1 = require('./myDirective');
 var MATERIAL_MODULES = [
     button_1.MdButtonModule,
     icon_1.MdIconModule,
@@ -48,9 +49,10 @@ var MaterialRootModule = (function () {
                 input_1.MdInputModule.forRoot(),
                 //MdSliderModule.forRoot(),
                 //MdSlideToggleModule.forRoot(),
-                core_2.OverlayModule.forRoot()
+                core_2.OverlayModule.forRoot(),
             ],
-            exports: MATERIAL_MODULES
+            declarations: [myDirective_1.ModalOpenDirective],
+            exports: [MATERIAL_MODULES, myDirective_1.ModalOpenDirective]
         }), 
         __metadata('design:paramtypes', [])
     ], MaterialRootModule);

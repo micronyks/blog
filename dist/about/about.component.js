@@ -28,7 +28,7 @@ var AboutComponent = (function () {
     };
     AboutComponent = __decorate([
         core_1.Component({
-            template: "<h6>Welcome :{{user}}\n   This is About Component \n   {{about}} </h6>\n   <div *ngIf=\"show\">Nikhil Shah</div>\n   <button (click)=\"click()\">Click</button>  \n  \n   "
+            template: "\n\n  <md-card>\n   <md-card-subtitle>Contact Us</md-card-subtitle>\n   <md-card-title>Nikhil Shah</md-card-title>   \n   <md-card-content>\n        <p>gmail : nikhilshahlive@gmail.com</p>\n        <p>Skype : nikhilshahlive</p>\n        <p>(M)   : 09033004579</p>\n   </md-card-content>\n  </md-card>\n   \n   "
         }), 
         __metadata('design:paramtypes', [shared_service_1.UserService, router_1.Router])
     ], AboutComponent);

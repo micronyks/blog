@@ -1,6 +1,17 @@
 md-sidenav-layout {
   height: 100%;
 }
+a{
+  color:blue;
+}
+a:hover {
+ text-decoration: none;
+}
+
+.active{
+  background: orangered;
+  color:white; 
+}
 
 md-sidenav-layout /deep/ .md-sidenav-content {
   overflow: hidden;
@@ -16,7 +27,7 @@ md-sidenav {
 .sidenav-title {
   color: black;
   text-indent: 20px;
-  background: deeppink;
+ 
   padding: 3px;
 }
 
@@ -26,9 +37,7 @@ md-sidenav {
 
 .app-content {
   padding: 20px;
-  height: calc(100% - 64px);
   overflow: auto;
-  border: 1px solid;
 }
 
 .app-toolbar-menu {
@@ -52,6 +61,8 @@ md-sidenav {
   text-align: left;
   text-decoration: none;
 }
+
+
 
 
 

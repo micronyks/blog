@@ -39,7 +39,7 @@ var HerolistComponent = (function () {
     };
     HerolistComponent = __decorate([
         core_1.Component({
-            template: "\n   <h2>HEROES</h2>\n    <ul class=\"items\">\n      <li *ngFor=\"let hero of heroes\"\n        [class.selected]=\"isSelected(hero)\"\n        (click)=\"onSelect(hero)\">\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n      </li>\n    </ul>\n   <a (click)=\"navigate()\">Detail</a>\n\n   <router-outlet name=\"namedOutlet\"></router-outlet>\n   ",
+            template: "\n   <h2>HEROES</h2>\n    <ul class=\"items\">\n      <li *ngFor=\"let hero of heroes\"\n        [class.selected]=\"isSelected(hero)\"\n        (click)=\"onSelect(hero)\">\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n      </li>\n    </ul>\n   <a (click)=\"navigate()\">Detail</a>\n\n  \n   ",
             styleUrls: ['app/heroes/heroes.css']
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute, router_1.Router])

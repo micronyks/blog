@@ -1,16 +1,41 @@
 md-sidenav-layout {
   height: 100%;
 }
-a{
-  color:blue;
-}
-a:hover {
- text-decoration: none;
-}
 
 .active{
-  background: orangered;
-  color:white; 
+  color:white !important;
+  font-size: 18px;
+  text-decoration: none;
+  background: orangered !important;
+  border:none;
+}
+a.active{
+text-decoration: none !important;
+}
+item.active{
+  border:none !important;
+  border-color: orangered !important;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active{
+  border-color: orangered !important;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+  border-color: orangered !important;
+}
+
+item.active:hover{
+  border:none !important;
+  border-color: orangered !important;
+}
+
+a:hover {
+ text-decoration: none !important;
+}
+
+md-toolbar.md-accent{
+  background:orangered !important;
 }
 
 md-sidenav-layout /deep/ .md-sidenav-content {

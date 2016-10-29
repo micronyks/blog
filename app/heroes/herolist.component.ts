@@ -12,6 +12,8 @@ import { Hero, HeroService }  from './hero.service';
       </li>
     </ul>
    <a (click)="navigate()">Detail</a>
+
+   <router-outlet name="namedOutlet"></router-outlet>
    `,
    styleUrls:['app/heroes/heroes.css']
 })

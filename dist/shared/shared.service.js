@@ -22,10 +22,13 @@ var UserService = (function () {
             .get('./students.json').map(function (t) { return t.json(); })
             .toPromise()
             .then(function (response) {
-            console.log('response:', response);
+            // console.log('response:',response);
         }, function (error) {
-            console.log('Error:', error);
+            //console.log('Error:',error);
         });
+    };
+    UserService.prototype.GetStudents = function () {
+        return this.http.get('./students.json').map(function (t) { return t.json()[0].id; });
     };
     UserService = __decorate([
         core_1.Injectable(), 

@@ -64,6 +64,7 @@ export class HerodetailComponent{
     private router: Router,
     private service: HeroService) {console.log('running')}
   ngOnInit() {
+    console.log('exe');
     this.route.params.forEach((params: Params) => {
        let id = +params['id']; // (+) converts string 'id' to a number
        this.service.getHero(id).then(hero => this.hero = hero);

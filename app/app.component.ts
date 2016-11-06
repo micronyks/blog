@@ -1,6 +1,8 @@
 import { Component,Injector} from '@angular/core';
-
+import {Http} from '@angular/http';
 import { ViewEncapsulation } from '@angular/core';
+import {UserService} from './shared/shared.service';
+import 'rxjs/Rx';
 import {
   Input,
   trigger,
@@ -25,7 +27,8 @@ import {HomeComponent} from './home/home.component';
 })
 export class AppComponent {
 events = [];
-	constructor(private location: Location,private router:Router) {
+myObj:any;
+	constructor(private location: Location,private router:Router,private http:Http,private ss:UserService) {
 		this.location.subscribe(ev => this.events.push(ev));
 
     router.events.subscribe(event => {
@@ -34,6 +37,19 @@ events = [];
       //}
     })
 	}
+
+  ngOnInit()
+  {
+    this.getStudents();
+    console.log('App ngOnInit');
+  }
+
+  getStudents()
+  {
+    this.myObj=this.ss.GetStudents().subscribe(t=>{console.log(this.myObj=t)});
+    
+    console.log('here');
+  }
 
 }
 

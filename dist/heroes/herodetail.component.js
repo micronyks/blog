@@ -41,6 +41,7 @@ var HerodetailComponent = (function () {
     });
     HerodetailComponent.prototype.ngOnInit = function () {
         var _this = this;
+        console.log('exe');
         this.route.params.forEach(function (params) {
             var id = +params['id']; // (+) converts string 'id' to a number
             _this.service.getHero(id).then(function (hero) { return _this.hero = hero; });

@@ -5,7 +5,7 @@ import { Hero, HeroService }  from './hero.service';
    template:`
    <h2>HEROES</h2>
     <ul class="items">
-      <li *ngFor="let hero of heroes"
+      <li *ngFor="let hero of heroes" 
         [class.selected]="isSelected(hero)"
         (click)="onSelect(hero)">
         <span class="badge">{{hero.id}}</span> {{hero.name}}
@@ -13,7 +13,7 @@ import { Hero, HeroService }  from './hero.service';
     </ul>
    <a (click)="navigate()">Detail</a>
 
-  
+   
    `,
    styleUrls:['app/heroes/heroes.css']
 })

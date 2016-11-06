@@ -4,6 +4,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class UserService{
   user="user : micronyks";
+  students:any;
   constructor(private http:Http){
     console.log('UserService fired');
   }
@@ -14,11 +15,15 @@ export class UserService{
             .toPromise()
             .then(
               (response) => {
-                console.log('response:',response);
+               // console.log('response:',response);
               },
               (error) => {
-                console.log('Error:',error);
+                //console.log('Error:',error);
               }
             );
+  }
+
+  public GetStudents(){
+    return this.http.get('./students.json').map(t=> {return t.json()[0].id});
   }
 }

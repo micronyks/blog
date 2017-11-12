@@ -20,15 +20,12 @@
  </li>
  
 >
-        
+
       let obs = new Rx.Observable.interval(1000);
-    
       obs.subscribe(x => console.log(x));
-
+     
+    <b>OUTPUT : 0 1 2 3 4 5...</b>
 >
-      
-OUTPUT : 0 1 2 3 4 5...
-
 Here <b>obs</b> is an observable defined with <b>Rx.Observable</b> which emits interger value after 1 second of interval.
 
  
@@ -45,26 +42,26 @@ Here <b>obs</b> is an observable defined with <b>Rx.Observable</b> which emits i
  <bR>It means, after creating an observable if you don't subscribe to observable, it will never emit the data.
  
 > 
-        // Create an observable
-        const ColdObservable = new Rx.Observable(observer => {
+
+       // Create an observable
+       const ColdObservable = new Rx.Observable(observer => {
           setTimeout(() => {
             observer.next(1);
           }, 1000);
-        });
+       });
 
-        // Subscription A
-        setTimeout(() => {
+       // Subscription A
+       setTimeout(() => {
           //commenting out the subscription of the ColdObservable
-
           //ColdObservable.subscribe(value => console.log(value));
-
-            console.log('ColdObservable is not subscribed');
-
+           console.log('ColdObservable is not subscribed');
         }, 0);
-        
->       
+      
+      
+    <b>OUTPUT</b> : "ColdObservable is not subscribed"
 
-<b>OUTPUT</b> : "ColdObservable is not subscribed"
+>
+
 
 <hr>
 
@@ -73,29 +70,23 @@ Here <b>obs</b> is an observable defined with <b>Rx.Observable</b> which emits i
  
 >
 
-        // Create an observable
-        const HotObservable = new Rx.Observable(observer => {
+       // Create an observable
+       const HotObservable = new Rx.Observable(observer => {
           setTimeout(() => {
             observer.next(1);
           }, 1000);
-        });
+       });
 
-        // Subscription B
-        setTimeout(() => {
-
+       
+       setTimeout(() => {
           console.log('HotObservable is subscribed');
-
           //Subscribing to HotObservable
-
           HotObservable.subscribe(value => console.log(`${value}`));
-
         }, 0);
-        
+                
+    <b>OUTPUT</b> : "HotObservable is subscribed"
+                    "1"           
 >
-        
- <b>OUTPUT</b> : "HotObservable is subscribed"
- <br/><br/>
-                  "1"
 
 
 ### There are hundred of operators associated with Rxjs which can be found here https://github.com/ReactiveX/rxjs/blob/master/doc/operators.md

@@ -20,11 +20,10 @@
  </li>
  
 >
-
-      let obs = new Rx.Observable.interval(1000);
-      obs.subscribe(x => console.log(x));
+    let obs = new Rx.Observable.interval(1000);
+    obs.subscribe(x => console.log(x));
      
-    <b>OUTPUT : 0 1 2 3 4 5...</b>
+<b>OUTPUT : 0 1 2 3 4 5...</b>
 >
 Here <b>obs</b> is an observable defined with <b>Rx.Observable</b> which emits interger value after 1 second of interval.
 
@@ -58,7 +57,7 @@ Here <b>obs</b> is an observable defined with <b>Rx.Observable</b> which emits i
         }, 0);
       
       
-    <b>OUTPUT</b> : "ColdObservable is not subscribed"
+ <b>OUTPUT</b> : "ColdObservable is not subscribed"
 
 >
 
@@ -84,8 +83,8 @@ Here <b>obs</b> is an observable defined with <b>Rx.Observable</b> which emits i
           HotObservable.subscribe(value => console.log(`${value}`));
         }, 0);
                 
-    <b>OUTPUT</b> : "HotObservable is subscribed"
-                    "1"           
+<b>OUTPUT</b> : "HotObservable is subscribed" <bR>
+                "1"           
 >
 
 
